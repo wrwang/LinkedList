@@ -1,13 +1,12 @@
-typedef struct _Node
-{
-  void *data;
-  struct _Node *next;
-} Node;
+struct Node {
+    void *data;
+    struct Node *next;
+};
 
-Node *newList(void); //returns a head of a new empty list
-Node *delete(Node *prev); // deletes the node after prev
-Node *insert(Node *prev, void *data); // inserts a new node with data field data after prev
-int length(Node *head); //number of elements in the list
-void printList(Node *head); //print the data fields for the entire list
-Node *getNode(Node *head, int i);
-void deleteList(Node *head);
+struct Node *newList(void);
+struct Node *delete(struct Node *prev);
+struct Node *insert(struct Node *prev, void *data);
+int length(struct Node *head);
+void printList(struct Node *head);
+struct Node *getNode(struct Node *head, int i);
+void deleteList(struct Node *head);
